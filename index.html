@@ -36,15 +36,17 @@
   <body>
     <div class="container">
       <h1>Train Calculator VaiSereno 2.0</h1>
-      <div class="d-flex">
+      <div class="d-flex gap-3 align-items-start">
         <form class="w-75">
           <div class="mb-3">
             <label for="customer-name" class="form-label">Nome:</label>
             <input type="text" class="form-control" id="customer-name" placeholder="Jhonny Bravo" />
+            <p class="fs-6 fst-italic text-danger" id="errorNameText">Non può essere vuoto</p>
           </div>
           <div class="mb-3">
             <label for="journey-km" class="form-label">KM da percorrere:</label>
             <input type="text" class="form-control" id="journey-km" placeholder="100" />
+            <p class="fs-6 fst-italic text-danger" id="errorKmText">Deve essere un numero intero</p>
           </div>
           <div class="mb-3">
             <label for="age-selector" class="form-label">Età:</label>
@@ -58,7 +60,7 @@
           <button type="reset" class="btn btn-warning mb-3">Svuota</button>
         </form>
 
-        <div class="w-25 text-end bg-primary-subtle p-3" id="ticket">
+        <div class="w-25 text-end bg-primary-subtle p-3 rounded" id="ticket">
           <div>
             <span>Subtotale:</span>
             <span id="subtotal-value"></span>
@@ -72,10 +74,10 @@
             <span id="discount-value"></span>
           </div>
           <div>
-            <span>TOTALE:</span>
-            <span id="final-price"></span>
+            <span class="fs-5 fw-bold">TOTALE:</span>
+            <span class="fs-5 fw-bold" id="final-price"></span>
           </div>
-          <div class="mt-4">Dati passeggero:</div>
+          <div class="mt-4 mb-2 fs-4 fw-bold border-top border-black">Dati passeggero:</div>
           <div>
             <span>Nome passeggero:</span>
             <span id="customer-detail-name"></span>
@@ -89,17 +91,17 @@
             <span id="ticket-name"></span>
           </div>
           <div>
-            <span>Posto:</span>
-            <span id="ticket-seat"></span>
+            <span class="fw-bold">Posto:</span>
+            <span class="fw-bold" id="ticket-seat"></span>
           </div>
           <div>
-            <span>Codice biglietto:</span>
-            <span id="ticket-code"></span>
+            <span class="fw-bold">Codice biglietto:</span>
+            <span class="fw-bold" id="ticket-code"></span>
           </div>
         </div>
       </div>
 
-      <code id="error" class="fs-3"></code>
+      <code id="error" class="fs-3 text-danger"></code>
     </div>
   </body>
 </html>
