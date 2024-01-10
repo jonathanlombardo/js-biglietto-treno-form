@@ -1,4 +1,4 @@
-console.log("JS OK");
+// console.log("JS OK");
 
 const customerNameInputElement = document.getElementById("customer-name");
 const journeyKmInputElement = document.getElementById("journey-km");
@@ -30,14 +30,17 @@ btnGenerateElement.addEventListener("click", function () {
   errorKmElement.style.display = "none";
   customerNameInputElement.style.borderColor = "";
   journeyKmInputElement.style.borderColor = "";
+
   discountLabelElement.style.display = "none";
   discountValueElement.style.display = "none";
+
   const customerName = customerNameInputElement.value;
   const journeyKm = parseInt(journeyKmInputElement.value);
   const userAge = ageSelectorElement.value;
 
   if (!isNaN(journeyKm) && customerName) {
     ticketElement.style.display = "";
+
     let ticketName = "Biglietto Intero";
     const pricePerKm = 0.21;
     let discount = 0;
@@ -48,6 +51,7 @@ btnGenerateElement.addEventListener("click", function () {
       ticketName = "Biglietto Ridotto";
       discount = 20;
       discountValue = (subtotalPrice * discount) / 100;
+
       discountLabelElement.style.display = "";
       discountValueElement.style.display = "";
 
@@ -57,6 +61,7 @@ btnGenerateElement.addEventListener("click", function () {
       ticketName = "Biglietto Over65";
       discount = 40;
       discountValue = (subtotalPrice * discount) / 100;
+
       discountLabelElement.style.display = "";
       discountValueElement.style.display = "";
 
@@ -69,6 +74,7 @@ btnGenerateElement.addEventListener("click", function () {
     subtotalValueElement.innerText = subtotalPrice.toFixed(2) + " €";
     pricePerKmElement.innerText = pricePerKm.toFixed(2) + " € / Km";
     finalPriceElement.innerText = finalPrice.toFixed(2) + " €";
+
     customerNameOutputElement.innerText = customerName;
     ticketNameElement.innerText = ticketName;
     journeyKmOutputElement.innerText = journeyKm + " Km";
