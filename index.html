@@ -34,7 +34,29 @@
   </head>
 
   <body>
-    <h1>Train Calculator VaiSereno 2.0</h1>
-    <code id="js_result">JS result</code>
+    <div class="container w-50">
+      <h1>Train Calculator VaiSereno 2.0</h1>
+      <form>
+        <div class="mb-3">
+          <label for="customer-name" class="form-label">Nome:</label>
+          <input type="text" class="form-control" id="customer-name" placeholder="Jhonny Bravo" />
+        </div>
+        <div class="mb-3">
+          <label for="journey-km" class="form-label">KM da percorrere:</label>
+          <input type="text" class="form-control" id="journey-km" placeholder="100" />
+        </div>
+        <div class="mb-3">
+          <label for="age-selector" class="form-label">Età:</label>
+          <select class="form-select" id="age-selector" aria-label="Selettore dell'età">
+            <option value="under18">Minorenne (minore di 18 anni)</option>
+            <option value="adult" selected>Adulto (tra 18 e 65 anni)</option>
+            <option value="over65">Over65 (maggiore di 65 anni)</option>
+          </select>
+        </div>
+        <button type="button" class="btn btn-primary mb-3" id="btn-generate">Genera</button>
+        <button type="reset" class="btn btn-warning mb-3">Svuota</button>
+      </form>
+      <code id="final-price" class="fs-3"></code>
+    </div>
   </body>
 </html>
