@@ -45,8 +45,14 @@ Visualizzare il biglietto solo dopo che l'utente ha cliccato sul bottone.
 
 #### MAILSTONE 1:
 
-- Richiedo età e la assegno ad una costante
-- Richiedo km di percorrenza e la assegno ad una costante
+- Recupero i seguenti elementi e li assegno ad una costante:
+
+  - input km da percorrere
+  - select età
+  - code risultato
+
+- Recupero valore input da input da percorrere e la assegno ad una costante
+- Recupero valore input da select età e la assegno ad una costante
 - Aggiungo condizione per la verifica del dato km di percorrenza
 
   - SE corretto procedo
@@ -64,6 +70,6 @@ Visualizzare il biglietto solo dopo che l'utente ha cliccato sul bottone.
     - Stampo il risultato
 
   - ALTRIMENTI
-    - Stampo messaggio d'errore
+    - Stampo messaggio d'errore in innertext code risultato
 
 #### MAILSTONE 2:
