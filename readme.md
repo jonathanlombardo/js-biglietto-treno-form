@@ -50,26 +50,29 @@ Visualizzare il biglietto solo dopo che l'utente ha cliccato sul bottone.
   - input km da percorrere
   - select età
   - code risultato
+  - bottone form
 
-- Recupero valore input da input da percorrere e la assegno ad una costante
-- Recupero valore input da select età e la assegno ad una costante
-- Aggiungo condizione per la verifica del dato km di percorrenza
+- Al click del bottone eseguo:
 
-  - SE corretto procedo
+  - Recupero valore input da input da percorrere e la assegno ad una costante
+  - Recupero valore input da select età e la assegno ad una costante
+  - Aggiungo condizione per la verifica del dato km di percorrenza
 
-    - Assegno il prezzo al km ad una costante
-    - Assegno 0 ad una variabile per lo sconto
-    - Calcolo il subtotale (km \* prezzo/km) e lo assegno ad una costante
-    - Aggiungo condizione per la verifica dell'età
-      - Se minorenne
-        - setto lo sconto al 20
-      - Se over 65
-        - setto lo sconto al 40
-    - Calcolo il prezzo finale sottraendo lo sconto dal subtotale e lo assegno ad una costante
+    - SE corretto procedo
 
-    - Stampo il risultato
+      - Assegno il prezzo al km ad una costante
+      - Assegno 0 ad una variabile per lo sconto
+      - Calcolo il subtotale (km \* prezzo/km) e lo assegno ad una costante
+      - Aggiungo condizione per la verifica dell'età
+        - Se minorenne
+          - setto lo sconto al 20
+        - Se over 65
+          - setto lo sconto al 40
+      - Calcolo il prezzo finale sottraendo lo sconto dal subtotale e lo assegno ad una costante
 
-  - ALTRIMENTI
-    - Stampo messaggio d'errore in innertext code risultato
+      - Stampo il risultato
+
+    - ALTRIMENTI
+      - Stampo messaggio d'errore in innertext code risultato
 
 #### MAILSTONE 2:
