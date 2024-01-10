@@ -17,18 +17,27 @@ const ticketNameElement = document.getElementById("ticket-name");
 const ticketSeatElement = document.getElementById("ticket-seat");
 const ticketCodeElement = document.getElementById("ticket-code");
 const errorElement = document.getElementById("error");
+const errorNameElement = document.getElementById("errorNameText");
+const errorKmElement = document.getElementById("errorKmText");
 
 ticketElement.style.display = "none";
+errorNameElement.style.display = "none";
+errorKmElement.style.display = "none";
 
 btnGenerateElement.addEventListener("click", function () {
+  errorElement.style.display = "none";
+  errorNameElement.style.display = "none";
+  errorKmElement.style.display = "none";
+  customerNameInputElement.style.borderColor = "";
+  journeyKmInputElement.style.borderColor = "";
   discountLabelElement.style.display = "none";
   discountValueElement.style.display = "none";
   const customerName = customerNameInputElement.value;
   const journeyKm = parseInt(journeyKmInputElement.value);
   const userAge = ageSelectorElement.value;
+
   if (!isNaN(journeyKm) && customerName) {
     ticketElement.style.display = "";
-    errorElement.style.display = "none";
     let ticketName = "Biglietto Intero";
     const pricePerKm = 0.21;
     let discount = 0;
@@ -69,6 +78,16 @@ btnGenerateElement.addEventListener("click", function () {
     ticketSeatElement.innerText = randomSeatNumber + randomSeatLetter.toUpperCase();
     ticketCodeElement.innerText = Math.random().toString(36).slice(2);
   } else {
+    if (!customerName) {
+      customerNameInputElement.style.borderColor = "red";
+      errorNameElement.style.display = "";
+    }
+
+    if (isNaN(journeyKm)) {
+      journeyKmInputElement.style.borderColor = "red";
+      errorKmElement.style.display = "";
+    }
+
     ticketElement.style.display = "none";
     errorElement.innerText = "Dati non validi";
     errorElement.style.display = "";
