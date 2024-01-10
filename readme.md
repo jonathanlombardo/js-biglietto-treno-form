@@ -4,14 +4,14 @@
 
 #### Esercizio di oggi:
 
-```plaintext
+```
 Calcolo del prezzo del biglietto del treno
 cartella/repo: js-biglietto-treno-form
 ```
 
 #### Descrizione:
 
-```plaintext
+```
 Scrivere un programma che chieda all'utente:
 - Il numero di chilometri da percorrere
 - Età del passeggero
@@ -24,20 +24,20 @@ Sulla base di queste informazioni dovrà calcolare il prezzo totale del bigliett
 
 #### MILESTONE 1:
 
-```plaintext
+```
 Iniziamo implementando il programma senza alcuna estetica: usando esclusivamente due input e un bottone (non stilizzati), realizziamo le specifiche scritte sopra. La risposta finale (o output) sarà anch'essa da scrivere in console.
 ```
 
 #### MILESTONE 2:
 
-```plaintext
+```
 Solo una volta che il milestone 1 sarà completo e funzionante allora realizzeremo un form in pagina in cui l'utente potrà inserire i dati e visualizzare il calcolo finale con il prezzo.
 Il recap dei dati e l'output del prezzo finale (cioè il biglietto) andranno quindi stampati in pagina. Il prezzo dovrà essere formattato con massimo due decimali, per indicare i centesimi sul prezzo.
 ```
 
 #### BONUS:
 
-```plaintext
+```
 Visualizzare il biglietto solo dopo che l'utente ha cliccato sul bottone.
 ```
 
@@ -75,4 +75,40 @@ Visualizzare il biglietto solo dopo che l'utente ha cliccato sul bottone.
     - ALTRIMENTI
       - Stampo messaggio d'errore in innertext code risultato
 
-#### MAILSTONE 2:
+#### MAILSTONE 2 + Bonus:
+
+- Recupero i seguenti elementi aggiuntivi e li assegno ad una costante:
+
+  - blocco biglietto
+  - elemento testo subtotale
+  - elemento sottotesto subtotale
+  - elemento label sconto
+  - elemento testo sconto
+  - elemento testo nome cliente
+  - elemento testo nome biglietto
+  - elemento testo posto assegnato
+  - elemento testo codice biglietto
+
+- Setto il display del blocco biglietto su none
+- Setto il display dell' elemento label sconto su none
+- Setto il display dell' elemento testo sconto su none
+
+- All'interno di condizione per la verifica del dato km di percorrenza > SE corretto
+  - Setto il display del blocco biglietto su "vuoto"
+  - Dichiaro e inizializzo una variabile per il nome del biglietto
+  - All'interno di condizione per la verifica dell'età > SE minorenne
+    - Setto il display dell' elemento label sconto su "vuoto"
+    - Setto il display dell' elemento testo sconto su "vuoto"
+    - Setto l'innertext dell' elemento label sconto con il nome dello sconto
+    - Setto l'innertext dell' elemento testo sconto con il valore dello sconto
+    - Setto la variabile nome biglietto su ridotto
+  - All'interno di condizione per la verifica dell'età > SE over65
+    - Setto il display dell' elemento label sconto su "vuoto"
+    - Setto il display dell' elemento testo sconto su "vuoto"
+    - Setto l'innertext dell' elemento label sconto con il nome dello sconto
+    - Setto l'innertext dell' elemento testo sconto con il valore dello sconto
+    - Setto la variabile nome biglietto su over65
+  - Setto l'innertext dell'elemento testo nome cliente con la variabile del nome del cliente
+  - Setto l'innertext dell'elemento testo nome biglietto con la variabile del nome del biglietto
+  - Setto l'innertext dell'elemento testo posto assegnato randomicamente
+  - Setto l'innertext dell'elemento testo codice biglietto randomicamente
