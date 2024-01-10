@@ -38,7 +38,7 @@ btnGenerateElement.addEventListener("click", function () {
   const journeyKm = parseInt(journeyKmInputElement.value);
   const userAge = ageSelectorElement.value;
 
-  if (!isNaN(journeyKm) && customerName) {
+  if (!isNaN(journeyKm) && journeyKm > 0 && customerName) {
     ticketElement.style.display = "";
 
     let ticketName = "Biglietto Intero";
@@ -89,7 +89,7 @@ btnGenerateElement.addEventListener("click", function () {
       errorNameElement.style.display = "";
     }
 
-    if (isNaN(journeyKm)) {
+    if (isNaN(journeyKm) || journeyKm <= 0) {
       journeyKmInputElement.style.borderColor = "red";
       errorKmElement.style.display = "";
     }

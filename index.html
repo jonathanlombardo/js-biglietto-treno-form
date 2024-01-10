@@ -46,7 +46,7 @@
           <div class="mb-3">
             <label for="journey-km" class="form-label">KM da percorrere:</label>
             <input type="text" class="form-control" id="journey-km" placeholder="100" />
-            <p class="fs-6 fst-italic text-danger" id="errorKmText">Deve essere un numero intero</p>
+            <p class="fs-6 fst-italic text-danger" id="errorKmText">Deve essere un numero intero maggiore di zero</p>
           </div>
           <div class="mb-3">
             <label for="age-selector" class="form-label">Età:</label>
@@ -60,7 +60,7 @@
           <button type="reset" class="btn btn-warning mb-3">Svuota</button>
         </form>
 
-        <div class="w-25 text-end bg-primary-subtle p-3 rounded" id="ticket">
+        <div class="flex-grow-1 text-end bg-primary-subtle p-3 rounded" id="ticket">
           <div>
             <span>Subtotale:</span>
             <span id="subtotal-value"></span>
